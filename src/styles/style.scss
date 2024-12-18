@@ -1,0 +1,90 @@
+$primary-color: #7030ca;
+$secondary-color: #642b74;
+$button-radius: 3px 35px 3px 35px;
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .customBtn {
+    &-radius {
+      border-radius: $button-radius;
+    }
+
+    &-bgViolet {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      transition: background-color 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+      }
+    }
+  }
+
+  .hero {
+    & {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    &__video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    &_content {
+      min-width: 80%;
+      height: 65%;
+    }
+
+    &_title b,
+    &_descr b {
+      font-weight: normal;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero {
+      text-align: center;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .card:hover .btn {
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+  }
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZIKMES test</title>
+    <script defer src="bundle.js"></script>
+  </head>
+  <body>
+    <header class="navbar bg-white d-flex justify-content-between px-2">
+      <a class="navbar-brand" href="#">Бренд</a>
+      <nav
+        class="d-none d-sm-block navbar-expand-sm navbar-expand-md navbar-expand-lg"
+      >
+        <ul class="list-unstyled navbar-nav flex-row justify-content-between">
+          <li class="nav-item"><a class="nav-link" href="#hero">Главная</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#catalog">Каталог</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Цены</a></li>
+        </ul>
+      </nav>
+      <button
+        class="d-none d-sm-block btn btn-primary px-4 customBtn-radius"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.621 10.544C6.891 9.811 6.19 9.11 5.456 8.38c-.933-.992-1.105-1.912-.671-2.234l.889-.513a1.163 1.163 0 00.425-1.588L4.765 1.732a1.163 1.163 0 00-1.589-.425l-.889.513c-2.884 1.665.464 7.013 1.864 8.413l1.616 1.616c1.4 1.4 6.748 4.748 8.413 1.864l.513-.89a1.163 1.163 0 00-.425-1.588L11.956 9.9a1.163 1.163 0 00-1.588.425l-.514.89c-.321.433-1.24.26-2.233-.672z"
+            fill="#fff"
+          ></path>
+        </svg>
+        Заказать звонок
+      </button>
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Закрыть"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary customBtn-radius customBtn-bgViolet"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary customBtn-radius">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-block d-sm-none col-4 gap-1 d-flex">
+        <button
+          class="btn btn-primary w-50 customBtn-radius"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.621 10.544C6.891 9.811 6.19 9.11 5.456 8.38c-.933-.992-1.105-1.912-.671-2.234l.889-.513a1.163 1.163 0 00.425-1.588L4.765 1.732a1.163 1.163 0 00-1.589-.425l-.889.513c-2.884 1.665.464 7.013 1.864 8.413l1.616 1.616c1.4 1.4 6.748 4.748 8.413 1.864l.513-.89a1.163 1.163 0 00-.425-1.588L11.956 9.9a1.163 1.163 0 00-1.588.425l-.514.89c-.321.433-1.24.26-2.233-.672z"
+              fill="#fff"
+            ></path>
+          </svg>
+        </button>
+        <button
+          class="btn w-50 customBtn-radius customBtn-borderGrey"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#burgerMenu"
+          aria-controls="burgerMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="burgerMenu"
+        aria-labelledby="burgerMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h3 id="burgerMenuLabel">Меню</h3>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-unstyled navbar-nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Цены</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="hero" class="hero">
+        <video class="hero__video" autoplay muted loop playsinline>
+          <source
+            src="https://gitrequests.github.io/interview-bootstrap/assets/video.mp4"
+            type="video/mp4"
+          />
+          Ваш браузер не поддерживает это видео.
+        </video>
+        <div class="overlay"></div>
+        <div class="container d-flex flex-column justify-content-around">
+          <div
+            class="hero_wrapper_top d-flex flex-column justify-content-start gap-2 col-12 col-sm-10 col-md-8 col-lg-7 text-white"
+          >
+            <h1 class="hero_title">
+              Купить <b class="text-danger">товар</b> с&nbsp;доставкой
+            </h1>
+            <p class="hero_descr">
+              Официальный поставщик
+              <b class="text-danger">товаров</b> в&nbsp;Стране!
+            </p>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center text-white flex-sm-row flex-column gap-4 hero_wrapper_bottom"
+          >
+            <button
+              class="btn btn-primary col-10 col-sm-4 col-md-3 col-lg-2 mw-50 customBtn-radius customBtn-bgViolet"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              Заказать звонок
+            </button>
+            <small class="col-10 col-sm-4 col-lg-2 bottom_caption">
+              Ваши данные под надежной защитой!
+            </small>
+          </div>
+        </div>
+      </section>
+      <section id="catalog" class="catalog">
+        <header
+          class="bg-dark text-white h-50 text-center py-2 section_header catalog_header"
+        >
+          <h2>Каталог</h2>
+        </header>
+        <div class="container py-5">
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 d-flex flex-column shadow">
+                <img
+                  src="https://gitrequests.github.io/interview-bootstrap/assets/image.webp"
+                  class="card-img-top"
+                  alt="Товар 1"
+                />
+                <div class="card-body flex-grow-1">
+                  <h5 class="card-title">Товар 1</h5>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Totam minus, voluptas?
+                  </p>
+                  <ul>
+                    <li>An item</li>
+                    <li>A second item</li>
+                    <li>A third item</li>
+                  </ul>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <button
+                    class="btn btn-primary w-100 customBtn-radius card-btn"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card h-100 d-flex flex-column shadow">
+                <img
+                  src="https://gitrequests.github.io/interview-bootstrap/assets/image.webp"
+                  class="card-img-top"
+                  alt="Товар 2"
+                />
+                <div class="card-body flex-grow-1">
+                  <h5 class="card-title">Товар 2</h5>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <button
+                    class="btn btn-primary w-100 customBtn-radius card-btn"
+                  >
+                    Купить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
